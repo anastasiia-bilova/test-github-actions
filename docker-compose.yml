@@ -1,0 +1,29 @@
+version: "3.1"
+
+services:
+  app-back:
+    container_name: app-back
+    build:
+      context: .
+      dockerfile: Dockerfile
+    depends_on:
+      - postgres
+    volumes:
+      - .:/app-back
+    environment:
+      - "DEBUG=True"
+      - "SECRET_KEY=q#-d-)5oo8cjoy6=(ejf=5jdg)e&(tf!@k2zs%9=8^=kq7gxq"
+      - "DATABASE_URL=postgresql://postgres:postgres@postgres:5432/postgres"
+    ports:
+      - "8000:8000"
+    stdin_open: true
+    tty: true
+
+  postgres:
+    container_name: postgres
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: postgres
+      POSTGRES_USER: postgres
