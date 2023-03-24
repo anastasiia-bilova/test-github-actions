@@ -1,6 +1,6 @@
 import pytest
 
-from src.sample import f
+from sample import f
 
 
 def test_mytest():
