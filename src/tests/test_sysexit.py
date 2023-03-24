@@ -1,8 +1,6 @@
 import pytest
 
-
-def f():
-    raise SystemExit(1)
+from src.sample import f
 
 
 def test_mytest():
