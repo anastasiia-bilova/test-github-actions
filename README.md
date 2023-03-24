@@ -3,4 +3,3 @@
 ⚙️ Configure GitHub Actions.
 
 ![Build & Testing](https://github.com/anastasiia-bilova/test-github-actions/actions/workflows/github-actions-demo.yml/badge.svg)
-Create README, add Github Actions badge
